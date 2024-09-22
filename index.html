@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Paola - Mi Mejor Amiga</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #ffcce6, #ff99cc);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 55px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            animation: parpadear 2s infinite ease-in-out;
+            font-family: 'Dancing Script', cursive;
+            z-index: 10;
+        }
+
+        .estrella {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: destello 4s infinite ease-in-out, moverEstrella 10s infinite linear;
+            opacity: 0.8;
+        }
+
+        .estrella:nth-child(2) {
+            top: 20%;
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        .estrella:nth-child(3) {
+            top: 60%;
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .estrella:nth-child(4) {
+            top: 80%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .estrella:nth-child(5) {
+            top: 40%;
+            left: 10%;
+            animation-delay: 1.5s;
+        }
+
+        .estrella:nth-child(6) {
+            top: 30%;
+            left: 80%;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes destello {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes parpadear {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes moverEstrella {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            background-color: #ff66b2;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff3385;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Paola, eres la estrella que ilumina mi vida 🌟</h1>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+
+    <button onclick="mostrarMensaje()">Ver mensaje</button>
+
+    <script>
+        function mostrarMensaje() {
+            alert('Gracias por ser mi mejor amiga, Paola. ¡Eres increíble!');
+        }
+    </script>
+</body>
+</html>
